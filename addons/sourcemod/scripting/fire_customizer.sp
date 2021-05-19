@@ -67,16 +67,13 @@ public void OnPluginStart()
 { 
 	HookEvent("round_start", OnRoundStart);
 
-	g_cCvar_CustomFireIgnite = CreateConVar("sm_fire_ignite_name", "burning_fx_sblue", "Defines the particle system file to be used for the ignite particles. ");
-	g_cCvar_CustomFireInferno = CreateConVar("sm_fire_inferno_name", "inferno_fx_alt", "Defines the particle system file to be used for the inferno particles. ");
+	g_cCvar_CustomFireIgnite = CreateConVar("sm_fire_ignite_name", "burning_fx_sblue", "Defines the particle system file to be used for the ignite particles.");
+	g_cCvar_CustomFireInferno = CreateConVar("sm_fire_inferno_name", "inferno_fx_alt", "Defines the particle system file to be used for the inferno particles.");
 
 	// Hook cvar changes. The particles must be precached before they're active, so the safest bet is at round start
 
 	g_cCvar_CustomFireIgnite.AddChangeHook(OnConVarChanged);
 	g_cCvar_CustomFireInferno.AddChangeHook(OnConVarChanged);
-	
-	g_cCvar_CustomFireIgnite.GetString(g_sIgniteName, sizeof(g_sIgniteName));
-	g_cCvar_CustomFireInferno.GetString(g_sInfernoName, sizeof(g_sInfernoName));
 
 	if(g_bLateLoad)
 	{
