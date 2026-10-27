@@ -40,7 +40,7 @@
 #define PLUGIN_NAME           "Custom fire particle system evildoer"
 #define PLUGIN_AUTHOR         "Chester the Cheetah, Anubis Edition"
 #define PLUGIN_DESCRIPTION    "Precachescustom fire particles to make the server look fancy."
-#define PLUGIN_VERSION        "1.3"
+#define PLUGIN_VERSION        "1.4"
 #define PLUGIN_URL            "https://github.com/Stewart-Anubis"
 
 // Cvar bullshit
@@ -99,7 +99,7 @@ public void OnConVarChanged(ConVar CVar, const char[] oldVal, const char[] newVa
 
 }
 
-public Action OnRoundStart(Handle event, char[] name, bool dontBroadcast)
+public Action OnRoundStart(Event event, char[] name, bool dontBroadcast)
 {
 	if(g_bIgniteLoad)
 	{
