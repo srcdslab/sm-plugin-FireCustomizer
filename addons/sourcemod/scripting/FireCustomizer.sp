@@ -40,7 +40,7 @@
 #define PLUGIN_NAME           "Custom fire particle system evildoer"
 #define PLUGIN_AUTHOR         "Chester the Cheetah, Anubis Edition"
 #define PLUGIN_DESCRIPTION    "Precachescustom fire particles to make the server look fancy."
-#define PLUGIN_VERSION        "1.4"
+#define PLUGIN_VERSION        "1.4.1"
 #define PLUGIN_URL            "https://github.com/Stewart-Anubis"
 
 // Cvar bullshit
@@ -65,6 +65,8 @@ public Plugin myinfo =
 
 public void OnPluginStart()
 { 
+	LoadTranslations("FireCustomizer.phrases");
+
 	HookEvent("round_start", OnRoundStart);
 
 	g_cCvar_CustomFireIgnite = CreateConVar("sm_fire_ignite_name", "burning_fx_sblue", "Defines the particle system file to be used for the ignite particles.");
@@ -87,13 +89,13 @@ public void OnConVarChanged(ConVar CVar, const char[] oldVal, const char[] newVa
 	if (CVar == g_cCvar_CustomFireIgnite)
 	{
 		g_cCvar_CustomFireIgnite.GetString(g_sIgniteName, sizeof(g_sIgniteName));
-		PrintToChatAll(" \x01 Ignite particle system changed from '%s' to '%s'. Changes will be applied next round. ", oldVal, newVal);
+		PrintToChatAll(" \x01 %t ", "Ignite Particles Changed", oldVal, newVal);
 		g_bIgniteLoad = true;
 	}
 	if (CVar == g_cCvar_CustomFireInferno)
 	{
 		g_cCvar_CustomFireInferno.GetString(g_sInfernoName, sizeof(g_sInfernoName));
-		PrintToChatAll(" \x01 Inferno particle system changed from '%s' to '%s'. Changes will be applied next round. ", oldVal, newVal);
+		PrintToChatAll(" \x01 %t ", "Inferno Particles Changed", oldVal, newVal);
 		g_bInfernoLoad = true;
 	}
 

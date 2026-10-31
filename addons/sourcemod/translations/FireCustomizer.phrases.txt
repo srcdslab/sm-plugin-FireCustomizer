@@ -1,0 +1,25 @@
+"Phrases"
+{
+	"Ignite Particles Changed"
+	{
+		"#format"	"{1:s},{2:s}"
+		"en"		"Ignite particle system changed from '{1}' to '{2}'. Changes will be applied next round."
+		"fr"		"Système de particules d'ignition changé de '{1}' à '{2}'. Les changements seront appliqués au prochain round."
+		"ru"		"Система частиц поджога изменена с '{1}' на '{2}'. Изменения вступят в силу в следующем раунде."
+		"es"		"Sistema de partículas de ignición cambiado de '{1}' a '{2}'. Los cambios se aplicarán en la próxima ronda."
+		"de"		"Partikelsystem für Entzündung von '{1}' zu '{2}' geändert. Die Änderungen gelten ab der nächsten Runde."
+		"pt"		"Sistema de partículas de ignição alterado de '{1}' para '{2}'. As mudanças serão aplicadas na próxima rodada."
+		"chi"		"点燃粒子系统已从 '{1}' 更改为 '{2}'。更改将在下一回合生效。"
+	}
+	"Inferno Particles Changed"
+	{
+		"#format"	"{1:s},{2:s}"
+		"en"		"Inferno particle system changed from '{1}' to '{2}'. Changes will be applied next round."
+		"fr"		"Système de particules d'inferno changé de '{1}' à '{2}'. Les changements seront appliqués au prochain round."
+		"ru"		"Система частиц пламени изменена с '{1}' на '{2}'. Изменения вступят в силу в следующем раунде."
+		"es"		"Sistema de partículas de inferno cambiado de '{1}' a '{2}'. Los cambios se aplicarán en la próxima ronda."
+		"de"		"Partikelsystem für Inferno von '{1}' zu '{2}' geändert. Die Änderungen gelten ab der nächsten Runde."
+		"pt"		"Sistema de partículas de inferno alterado de '{1}' para '{2}'. As mudanças serão aplicadas na próxima rodada."
+		"chi"		"火海粒子系统已从 '{1}' 更改为 '{2}'。更改将在下一回合生效。"
+	}
+}
