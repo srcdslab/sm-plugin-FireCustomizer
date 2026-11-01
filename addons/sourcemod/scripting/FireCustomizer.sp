@@ -40,7 +40,7 @@
 #define PLUGIN_NAME           "Custom fire particle system evildoer"
 #define PLUGIN_AUTHOR         "Chester the Cheetah, Anubis Edition"
 #define PLUGIN_DESCRIPTION    "Precachescustom fire particles to make the server look fancy."
-#define PLUGIN_VERSION        "1.4.1"
+#define PLUGIN_VERSION        "1.4.2"
 #define PLUGIN_URL            "https://github.com/Stewart-Anubis"
 
 // Cvar bullshit
@@ -77,6 +77,9 @@ public void OnPluginStart()
 	g_cCvar_CustomFireIgnite.AddChangeHook(OnConVarChanged);
 	g_cCvar_CustomFireInferno.AddChangeHook(OnConVarChanged);
 
+	g_cCvar_CustomFireIgnite.GetString(g_sIgniteName, sizeof(g_sIgniteName));
+	g_cCvar_CustomFireInferno.GetString(g_sInfernoName, sizeof(g_sInfernoName));
+
 	if(g_bLateLoad)
 	{
 		g_bLateLoad = false;
@@ -112,6 +115,7 @@ public Action OnRoundStart(Event event, char[] name, bool dontBroadcast)
 	{
 		loadInferno();
 	}
+	return Plugin_Continue;
 }
 
 public void OnMapStart()
